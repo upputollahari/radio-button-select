@@ -62,3 +62,7 @@ label {
     float: left;
     padding-right: 30px;
 }  
+
+.error{
+  color: red;
+}
