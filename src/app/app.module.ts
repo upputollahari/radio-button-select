@@ -11,6 +11,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 
 import {MatRadioModule} from '@angular/material/radio';
 import { RadioselectComponent } from './radioselect/radioselect.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   imports:      [ 
     BrowserModule, 
@@ -20,6 +21,7 @@ import { RadioselectComponent } from './radioselect/radioselect.component';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule
     
      ],
   declarations: [ AppComponent, HelloComponent, RadioselectComponent ],
