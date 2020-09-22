@@ -17,17 +17,25 @@ myFilter = (d: Date | null): boolean => {
   constructor(public fb: FormBuilder) { }
 
  selectionForm = this.fb.group({
-    gender: ['male', [Validators.required]]
+    gameSelection: ['', [Validators.required]],
+    startDate:['',Validators.required],
+    endDate:['',Validators.required],
+    selectGame:['',Validators.required],
+    selectOutcome:['',Validators.required],
+    gameID:['',Validators.required]
   });
-
+// date(e) {
+//       var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
+//     return convertDate;
+//     }
    // Getter method to access form control
   get myForm() {
-    return this.selectionForm.get('gender');
+    return this.selectionForm;
   }
   ngOnInit() {
   }
  onSubmit() {
- 
+ console.log(this.selectionForm.value);
   }  
 
 }

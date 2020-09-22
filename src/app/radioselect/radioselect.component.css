@@ -54,11 +54,11 @@ label {
     height: auto !important;
 }
 
-/* .float-container {
-    padding-right: 20px;
-} */
+.float-container {
+    display: flex;
+}
 
 .float-child {
     float: left;
-    padding-right: 20px;
+    padding-right: 30px;
 }  

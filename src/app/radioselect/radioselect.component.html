@@ -6,18 +6,20 @@
 
 <form [formGroup]="selectionForm" (ngSubmit)="onSubmit()">
 	<div class="form-group">
-		<mat-radio-group formControlName="gender" class="example-radio-group">
-			<div class="float-container">
-				<div class="float-child">
+		<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
+		<div class="float-container">
+			<div class="float-child">
+				<mat-radio-group formControlName="gameSelection" class="example-radio-group">
 					<mat-radio-button [value]="1">
 						<label>Game</label>
 					</mat-radio-button>
-				</div>
-        <div class="float-child">
+				</mat-radio-group>
+			</div>
+			<div class="float-child">
 				<div>
 					<mat-form-field appearance="fill">
 						<mat-label>start date</mat-label>
-						<input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker1">
+						<input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker1" formControlName="startDate">
 						<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
 						<mat-datepicker #picker1></mat-datepicker>
 					</mat-form-field>
@@ -25,15 +27,15 @@
 				<div>
 					<mat-form-field appearance="fill">
 						<mat-label>End date</mat-label>
-						<input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker2">
+						<input matInput  [matDatepickerFilter]="myFilter" [matDatepicker]="picker2" formControlName="endDate">
 						<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
 						<mat-datepicker #picker2></mat-datepicker>
 					</mat-form-field>
 				</div>
 				<div>
 					<mat-form-field appearance="fill">
-						<mat-label>Choose an option</mat-label>
-						<mat-select>
+						<mat-label>Select Game</mat-label>
+						<mat-select formControlName="selectGame">
 							<mat-option value="option1">Option 1</mat-option>
 							<mat-option value="option2">Option 2 </mat-option>
 							<mat-option value="option3">Option 3</mat-option>
@@ -42,8 +44,8 @@
 				</div>
 				<div>
 					<mat-form-field appearance="fill">
-						<mat-label>Choose an option</mat-label>
-						<mat-select>
+						<mat-label>Select Outcome</mat-label>
+						<mat-select formControlName="selectOutcome">
 							<mat-option value="option1">Option 1</mat-option>
 							<mat-option value="option2">Option 2 </mat-option>
 							<mat-option value="option3">Option 3</mat-option>
@@ -51,15 +53,22 @@
 					</mat-form-field>
 				</div>
 			</div>
+		</div>
+		<div class="float-container">
+			<div class="float-child">
+				<mat-radio-group formControlName="gameSelection" class="example-radio-group">
+					<mat-radio-button [value]="2"><label>Game ID</label>
+					</mat-radio-button>
+				</mat-radio-group>
 			</div>
-			
-
-			<mat-radio-button [value]="2"><label>Game ID</label>
-				<!-- <div>
-					<input type="text" class="Bounds">
-    </div> -->
-			</mat-radio-button>
-		</mat-radio-group>
+			<div class="float-child">
+				<mat-form-field appearance="fill">
+					<mat-label>Enter game ID</mat-label>
+					<input matInput formControlName="gameID">
+  </mat-form-field>
+			</div>
+		</div>
+		<!-- </mat-radio-group> -->
 	</div>
 	<div>
 		<button type="submit">Search</button>
