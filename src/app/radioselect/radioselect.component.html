@@ -6,20 +6,20 @@
 
 <form [formGroup]="selectionForm" (ngSubmit)="onSubmit()">
 	<div class="form-group">
-		<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
-		<div class="float-container">
+		<mat-radio-group formControlName="gameSelection" class="example-radio-group">
+		<div class="float-container" >
 			<div class="float-child">
-				<mat-radio-group formControlName="gameSelection" class="example-radio-group">
-					<mat-radio-button [value]="1">
+				<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
+					<mat-radio-button [value]="1" (click)="toggle()" checked>
 						<label>Game</label>
 					</mat-radio-button>
-				</mat-radio-group>
+				<!-- </mat-radio-group> -->
 			</div>
 			<div class="float-child">
 				<div>
-					<mat-form-field appearance="fill">
+					<mat-form-field appearance="fill" >
 						<mat-label>start date</mat-label>
-						<input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker1" formControlName="startDate">
+						<input matInput (dateChange)="startDate($event)" [disabled]="!isSelected" [matDatepicker]="picker1" formControlName="startDate" >
 						<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
 						<mat-datepicker #picker1></mat-datepicker>
 					</mat-form-field>
@@ -27,7 +27,7 @@
 				<div>
 					<mat-form-field appearance="fill">
 						<mat-label>End date</mat-label>
-						<input matInput  [matDatepickerFilter]="myFilter" [matDatepicker]="picker2" formControlName="endDate">
+						<input matInput  (dateChange)="endDate($event)" [matDatepicker]="picker2" formControlName="endDate" [disabled]="!isSelected">
 						<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
 						<mat-datepicker #picker2></mat-datepicker>
 					</mat-form-field>
@@ -35,7 +35,7 @@
 				<div>
 					<mat-form-field appearance="fill">
 						<mat-label>Select Game</mat-label>
-						<mat-select formControlName="selectGame">
+						<mat-select formControlName="selectGame" [disabled]="!isSelected">
 							<mat-option value="option1">Option 1</mat-option>
 							<mat-option value="option2">Option 2 </mat-option>
 							<mat-option value="option3">Option 3</mat-option>
@@ -45,7 +45,7 @@
 				<div>
 					<mat-form-field appearance="fill">
 						<mat-label>Select Outcome</mat-label>
-						<mat-select formControlName="selectOutcome">
+						<mat-select formControlName="selectOutcome" [disabled]="!isSelected">
 							<mat-option value="option1">Option 1</mat-option>
 							<mat-option value="option2">Option 2 </mat-option>
 							<mat-option value="option3">Option 3</mat-option>
@@ -56,19 +56,22 @@
 		</div>
 		<div class="float-container">
 			<div class="float-child">
-				<mat-radio-group formControlName="gameSelection" class="example-radio-group">
-					<mat-radio-button [value]="2"><label>Game ID</label>
+				<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
+					<mat-radio-button [value]="2" (click)="toggle()"> <label>Game ID</label>
 					</mat-radio-button>
-				</mat-radio-group>
+				<!-- </mat-radio-group> -->
 			</div>
 			<div class="float-child">
 				<mat-form-field appearance="fill">
 					<mat-label>Enter game ID</mat-label>
-					<input matInput formControlName="gameID">
+					<input matInput formControlName="gameID" [disabled]="isSelected">
+          <!-- <mat-error *ngIf="!selectionForm.controls['gameID'].valid && selectionForm.controls['gameID'].touched">
+        Required field.
+      </mat-error> -->
   </mat-form-field>
 			</div>
 		</div>
-		<!-- </mat-radio-group> -->
+		</mat-radio-group>
 	</div>
 	<div>
 		<button type="submit">Search</button>
