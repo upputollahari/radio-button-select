@@ -4,18 +4,17 @@
 <button type="">submit</button>
 </form> -->
 
-<form #form="ngForm" (ngSubmit)="submit(form)">
+<!-- <form #form="ngForm" (ngSubmit)="submit(form)">
 <input type="text" [value]="colorID">
-<input type="color" name="id" [(ngModel)]="colorID" value="#ffffff"> <br>
+<input type="color" name="id" [(ngModel)]="colorID" value="#ffffff"> <br> -->
 
-<button type="submit" >submit</button>
-</form>
 
-<div *ngFor="let dt of data;">
-<p>{{dt.ID}}</p>
-</div>
+    <!-- <form #form2> -->
+        <div *ngFor="let dt of data;">
+            <input type="text" [value]="dt.value">
+            <input type="color" name="dt.value" [(ngModel)]="dt.value">
+            <br>
+            </div>
+            <button (click)="submit2(data)">click</button>
 
-<div *ngFor="let dt of data;">
-<input type="text" [value]="dt.ID">
-<input type="color" name="id" [(ngModel)]="dt.ID" value="#ffffff"> <br>
-</div>
+    <!-- </form> -->

@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ColorPickerComponent implements OnInit {
 data=[
   {"ID":"123","value":"#808080"},
-  {"ID":"1234","value":"#591717"}
+  {"ID":"1234","value":"#591717"},
+  {"ID":"12345","value":"#9f1414"},
 ];
 colorID:any="#808080";
   constructor() { }
@@ -18,4 +19,7 @@ colorID:any="#808080";
 submit(form){
 console.log(form.value)
 }
+submit2(dt) {
+    console.log(dt);
+  }
 }
