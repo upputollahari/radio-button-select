@@ -27,7 +27,7 @@ h5 {
   padding-top: 20px;
 }
 
-label {
+/* label {
   width: 33px;
   height: 24px;
   font-family: Oswald;
@@ -38,7 +38,7 @@ label {
   line-height: 1.5;
   letter-spacing: normal;
   color: #444444;
-}
+} */
 
 .Bounds {
   width: 222px;
@@ -53,6 +53,9 @@ label {
     width:250px !important;
     height: auto !important;
 }
+.mat-radio-button{
+  width: 70px;
+}
 
 .float-container {
     display: flex;
@@ -60,9 +63,18 @@ label {
 
 .float-child {
     float: left;
-    padding-right: 30px;
+    padding-right: 50px;
 }  
+/* .pos1 {
+  position: relative;
+  left: 30px;
 
+}
+.pos2 {
+  position: relative;
+  left: 14px;
+
+} */
 .error{
   color: red;
 }

@@ -11,7 +11,7 @@
 			<div class="float-child">
 				<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
 					<mat-radio-button [value]="1" (click)="toggle()" checked>
-						<label>Game</label>
+					Game
 					</mat-radio-button>
 				<!-- </mat-radio-group> -->
 			</div>
@@ -59,11 +59,10 @@
 		<div class="float-container">
 			<div class="float-child">
 				<!-- <mat-radio-group formControlName="gameSelection" class="example-radio-group"> -->
-					<mat-radio-button [value]="2" (click)="toggle()"> <label>Game ID</label>
-					</mat-radio-button>
+					<mat-radio-button [value]="2" (click)="toggle()">Game ID</mat-radio-button>
 				<!-- </mat-radio-group> -->
 			</div>
-			<div class="float-child">
+			<div class="float-child ">
 				<mat-form-field appearance="fill">
 					<mat-label>Enter game ID</mat-label>
 					<input matInput formControlName="gameID" [disabled]="isSelected">
