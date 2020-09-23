@@ -1,6 +1,6 @@
 
 .jumbotron {
-  padding: 20px 2rem 27px;
+  /* padding: 20px 2rem 27px; */
   background: #E91E63;
   margin: 0 auto 25px;
   border-radius: 0;
@@ -8,7 +8,7 @@
 
 .h1,
 h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #fde4ed;
   font-weight: 300;
   margin: 0;
@@ -51,14 +51,19 @@ h5 {
 
 .mat-form-field {
     width:250px !important;
-    height: auto !important;
+    height: 40px !important;
 }
 .mat-radio-button{
   width: 70px;
 }
+.mat-sel{
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
 
 .float-container {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .float-child {
@@ -75,6 +80,13 @@ h5 {
   left: 14px;
 
 } */
+.button{
+  text-align: center;
+}
 .error{
   color: red;
 }
+
+/* form{
+  text-align: center;
+} */

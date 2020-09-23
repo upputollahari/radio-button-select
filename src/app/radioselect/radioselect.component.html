@@ -17,7 +17,7 @@
 			</div>
 			<div class="float-child">
 				<div>
-					<mat-form-field appearance="fill" >
+					<mat-form-field appearance="fill" class="mat-sel">
 						<mat-label>start date</mat-label>
 						<input matInput  [disabled]="!isSelected" [matDatepicker]="picker1" formControlName="startDate" >
 						<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -27,7 +27,7 @@
 				</div>
        
 				<div>
-					<mat-form-field appearance="fill">
+					<mat-form-field appearance="fill" class="mat-sel">
 						<mat-label>End date</mat-label>
 						<input matInput [max]="maxDate"  [matDatepicker]="picker2" formControlName="endDate" [disabled]="!isSelected">
 						<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
@@ -35,7 +35,7 @@
 					</mat-form-field>
 				</div>
 				<div>
-					<mat-form-field appearance="fill">
+					<mat-form-field appearance="fill" class="mat-sel">
 						<mat-label>Select Game</mat-label>
 						<mat-select formControlName="selectGame" [disabled]="!isSelected">
 							<mat-option value="option1">Option 1</mat-option>
@@ -45,7 +45,7 @@
 					</mat-form-field>
 				</div>
 				<div>
-					<mat-form-field appearance="fill">
+					<mat-form-field appearance="fill" class="mat-sel">
 						<mat-label>Select Outcome</mat-label>
 						<mat-select formControlName="selectOutcome" [disabled]="!isSelected">
 							<mat-option value="option1">Option 1</mat-option>
@@ -63,7 +63,7 @@
 				<!-- </mat-radio-group> -->
 			</div>
 			<div class="float-child ">
-				<mat-form-field appearance="fill">
+				<mat-form-field appearance="fill" class="mat-sel">
 					<mat-label>Enter game ID</mat-label>
 					<input matInput formControlName="gameID" [disabled]="isSelected">
           <!-- <mat-error *ngIf="!selectionForm.controls['gameID'].valid && selectionForm.controls['gameID'].touched">
@@ -75,6 +75,6 @@
 		</mat-radio-group>
 	</div>
 	<div>
-		<button type="submit">Search</button>
+		<button type="submit" mat-raised-button color="primary">Search</button>
 	</div>
 </form>
