@@ -28,18 +28,19 @@ export class RadioselectComponent implements OnInit {
   
 
   // Date
-  StartDate(e) {
-    var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
-    this.myForm.get("startDate").setValue(convertDate, {
-      onlyself: true
-    });
-  }
-  EndDate(e) {
-    var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
-    this.myForm.get("endDate").setValue(convertDate, {
-      onlyself: true
-    });
-  }
+  // StartDate(e) {
+  //   var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
+  //   this.myForm.get("startDate").setValue(convertDate, {
+  //     onlyself: true
+  //   });
+  // }
+  // (dateChange)="StartDate($event)"
+  // EndDate(e) {
+  //   var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
+  //   this.myForm.get("endDate").setValue(convertDate, {
+  //     onlyself: true
+  //   });
+  // }
   // Getter method to access form control
   get myForm() {
     return this.selectionForm;
