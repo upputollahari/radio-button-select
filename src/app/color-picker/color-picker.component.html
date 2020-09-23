@@ -7,5 +7,15 @@
 <form #form="ngForm" (ngSubmit)="submit(form)">
 <input type="text" [value]="colorID">
 <input type="color" name="id" [(ngModel)]="colorID" value="#ffffff"> <br>
+
 <button type="submit" >submit</button>
 </form>
+
+<div *ngFor="let dt of data;">
+<p>{{dt.ID}}</p>
+</div>
+
+<div *ngFor="let dt of data;">
+<input type="text" [value]="dt.ID">
+<input type="color" name="id" [(ngModel)]="dt.ID" value="#ffffff"> <br>
+</div>

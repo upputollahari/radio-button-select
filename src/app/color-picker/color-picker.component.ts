@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color-picker.component.css']
 })
 export class ColorPickerComponent implements OnInit {
-data;
+data=[
+  {"ID":"123","value":"#808080"},
+  {"ID":"1234","value":"#591717"}
+];
 colorID:any="#808080";
   constructor() { }
 
