@@ -1,0 +1,11 @@
+<!-- <form #form="ngForm" (ngSubmit)="submit(form)">
+  <input type="text" value="id">
+<input type="color" ngModel name="id" #id="ngModel" ><br>
+<button type="">submit</button>
+</form> -->
+
+<form #form="ngForm" (ngSubmit)="submit(form)">
+<input type="text" [value]="colorID">
+<input type="color" name="id" [(ngModel)]="colorID" value="#ffffff"> <br>
+<button type="submit" >submit</button>
+</form>

@@ -13,6 +13,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { RadioselectComponent } from './radioselect/radioselect.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
 
 @NgModule({
   imports:      [ 
@@ -27,7 +28,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule
     
      ],
-  declarations: [ AppComponent, HelloComponent, RadioselectComponent ],
+  declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
