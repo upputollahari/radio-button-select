@@ -1,3 +1,35 @@
+    <!-- Default color for gradient -->
+    <input class="color1"  type="color" name="color1" [(ngModel)]="color1" value="#0000ff" /> 
+    <input class="color2" type="color" name="color2" [(ngModel)]="color2" value="#add8e6" />
+    <br>
+    <button (click)="changeGradient()">click</button> 
+
+    <div [style.background]="linear">
+      adsSAdasd
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <form #form="ngForm" (ngSubmit)="submit(form)">
   <input type="text" value="id">
 <input type="color" ngModel name="id" #id="ngModel" ><br>
@@ -10,11 +42,11 @@
 
 
     <!-- <form #form2> -->
-        <div *ngFor="let dt of data;">
+        <!-- <div *ngFor="let dt of data;">
             <input type="text" [value]="dt.value">
             <input type="color" name="dt.value" [(ngModel)]="dt.value">
             <br>
             </div>
-            <button (click)="submit2(data)">click</button>
+            <button (click)="submit2(data)">click</button> -->
 
     <!-- </form> -->

@@ -54,6 +54,8 @@ export class RadioselectComponent implements OnInit {
     selectOutcome: ["", Validators.required],
     gameID: ["", Validators.required]
   },{validator: this.checkDates});
+
+  
   }
  toggle(){
     this.isSelected = !this.isSelected;
