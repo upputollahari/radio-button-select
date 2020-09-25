@@ -7,13 +7,22 @@ import { HelloComponent } from './hello.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatCommonModule, MatNativeDateModule} from '@angular/material/core';
 
 import {MatRadioModule} from '@angular/material/radio';
 import { RadioselectComponent } from './radioselect/radioselect.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
+
+import { ExampleDialogComponent } from './example/example-dialog/example-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ExampleComponent } from './example/example.component';
+import { CommonModule } from '@angular/common';
+
+
+
 
 @NgModule({
   imports:      [ 
@@ -25,10 +34,21 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatButtonModule
-    
+    MatButtonModule,
+     FormsModule,
+    MatButtonModule,
+    MatCommonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+    MatCommonModule,
+    MatFormFieldModule,
+    MatInputModule
      ],
-  declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent ],
+  declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent, ExampleDialogComponent,  ExampleComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,13 @@
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="languageName" placeholder="language name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="languageCode" placeholder="language code">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+</ol>
