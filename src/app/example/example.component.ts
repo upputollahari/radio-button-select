@@ -22,9 +22,12 @@ languageCode:string;
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       // this.name = result;
-      this.languageName=result.languageName;
+      if(result!=null){
+this.languageName=result.languageName;
       this.languageCode=result.languageCode;
       console.log(result);
+      }  
+    
       // this.name2=
     });
   }
