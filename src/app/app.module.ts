@@ -49,6 +49,7 @@ import { CommonModule } from '@angular/common';
     MatInputModule
      ],
   declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent, ExampleDialogComponent,  ExampleComponent],
+  entryComponents: [ExampleDialogComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
