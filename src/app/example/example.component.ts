@@ -23,7 +23,7 @@ languageCode:string;
       console.log('The dialog was closed');
       // this.name = result;
       if(result!=null){
-this.languageName=result.languageName;
+    this.languageName=result.languageName;
       this.languageCode=result.languageCode;
       console.log(result);
       }  
