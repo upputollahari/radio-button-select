@@ -20,8 +20,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ExampleComponent } from './example/example.component';
 import { CommonModule } from '@angular/common';
+import { TableexportComponent } from './tableexport/tableexport.component';
 
-
+import {AccordionModule} from 'primeng/accordion';
 
 
 @NgModule({
@@ -46,9 +47,11 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatCommonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AccordionModule,
+    
      ],
-  declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent, ExampleDialogComponent,  ExampleComponent],
+  declarations: [ AppComponent, HelloComponent, RadioselectComponent, ColorPickerComponent, ExampleDialogComponent,  ExampleComponent, TableexportComponent],
   entryComponents: [ExampleDialogComponent],
   bootstrap:    [ AppComponent ]
 })
