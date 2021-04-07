@@ -42,6 +42,12 @@ export class TableexportComponent implements OnInit {
   reloadModule() {
     this.chatContainer.clear();
     console.log("reload module");
-    this.loadChatModule();
+    // this.loadChatModule();
+    // this.componentFactory = this.moduleRef.intance.resolveComponent();
+    this.chatContainer.createComponent(
+      this.componentFactory,
+      null,
+      this.moduleRef.injector
+    );
   }
 }

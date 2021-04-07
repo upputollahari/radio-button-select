@@ -14,6 +14,7 @@ import { ChatComponent } from "./chat.component";
 export class BingoChatModule {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
   public resolveComponent(): ComponentFactory<ChatComponent> {
+    console.log("123");
     return this.componentFactoryResolver.resolveComponentFactory(ChatComponent);
   }
 }
