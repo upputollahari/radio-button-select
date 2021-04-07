@@ -1,3 +1,11 @@
+<button (click)="reloadModule()">click</button>
 <p>
-tableexport works!
+  tableexport works!
 </p>
+
+<div class='chat-container' [ngStyle]="{'height':chatHeight,'width':chatWidth}">
+  <ng-template #chatContainer></ng-template>
+</div>
+
+<!-- <div (click)="reloadModule()">click</div> -->
+<!-- <button (click)="reloadModule()">reload <button> -->
